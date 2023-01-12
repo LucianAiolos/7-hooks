@@ -13,15 +13,13 @@ function Posts() {
 
   const getPosts = async () => {
     try {
-      const res = await axios.get(`https://dummyjson.com/posts?limit=20`)
-      console.log(res.data)
+      const res = await axios.get(`https://dummyjson.com/posts?limit=13`)
+      // console.log(res.data)
       setPosts(res.data.posts)
     } catch (error) {
       alert(error)
     }
   }
-
-  console.log(posts)
 
   return (
     <div className='posts-container'>
